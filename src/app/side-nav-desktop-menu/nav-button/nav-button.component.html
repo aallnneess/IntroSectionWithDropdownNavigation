@@ -1,0 +1,32 @@
+<div class="md:relative group">
+
+  <!-- Button container -->
+  <div class="flex md:justify-center items-center space-x-2" (click)="toggle()">
+    <!-- Button text -->
+    <p class="text-base text-Medium_Gray md:text-sm md:font-bold text-opacity-70 hover:text-Almost_Black">{{text}}</p>
+
+    <!-- Arrow icon -->
+    <div *ngIf="showArrow">
+      <!-- Open arrow icon when menu is shown -->
+      <svg class="hidden md:block" *ngIf="showMenu" width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+        <path class="" stroke="#686868" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/>
+      </svg>
+      <!-- Closed arrow icon when menu is hidden -->
+      <svg class="hidden md:block" *ngIf="!showMenu" width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+        <path class="md:group-hover:hidden" stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
+        <path class="md:hidden md:group-hover:block md:group-hover:stroke-Almost_Black" stroke="#686868" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/>
+      </svg>
+      <!-- Arrow icon for mobile view -->
+      <svg class="md:hidden" width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+        <path *ngIf="!showMenu" stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
+        <path *ngIf="showMenu" stroke="#686868" stroke-width="1.5" fill="none" d="m1 5 4-4 4 4"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Pop-up menu container -->
+  <app-nav-popup *ngIf="usePopupMenu" [ngClass]="xPosition() + mobileClick()" class="md:absolute z-10 md:group-hover:block" [width]="width">
+    <ng-content></ng-content>
+  </app-nav-popup>
+
+</div>

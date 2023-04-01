@@ -1,0 +1,30 @@
+<div class="flex flex-col items-center md:flex-row md:justify-center md:h-[640px] md:mt-10">
+  <!-- Mobile hero image -->
+  <img class="md:hidden" src="assets/images/image-hero-mobile.png" alt="mobile-hero">
+  <!-- Desktop hero image -->
+  <img class="hidden md:block md:order-2 md:max-w-[480px]" src="assets/images/image-hero-desktop.png" alt="desktop-hero">
+
+  <div class="md:relative flex flex-col justify-center items-center md:order-1 md:items-start md:mr-40 md:h-full">
+    <!-- "Make remote work" text for mobile view -->
+    <p class="text-Almost_Black text-center font-bold text-4xl mt-12 md:hidden">Make remote work</p>
+    <!-- "Make" and "remote work" texts for desktop view -->
+    <p class="hidden text-Almost_Black font-bold text-4xl mt-0 md:block md:text-[80px]">Make</p>
+    <p class="hidden text-Almost_Black font-bold text-4xl mt-1 md:block md:mt-10 md:text-[80px]">remote work</p>
+
+    <!-- Paragraph for describing the product -->
+    <p class="mx-4 text-center text-Medium_Gray mt-4 md:mx-0 md:text-start md:max-w-sm md:mt-12 md:text-lg">
+      Get your team in sync, no matter your location. Streamline processes,
+      create team rituals, and watch productivity soar.
+    </p>
+
+    <!-- "Learn more" button -->
+    <span>
+      <button class="mt-6 bg-Almost_Black font-bold text-Almost_White px-6 py-3 rounded-2xl border md:text-lg md:mt-12 hover:text-Almost_Black hover:bg-Almost_White hover:border hover:border-Almost_Black">
+        Learn more
+      </button>
+    </span>
+
+    <!-- Footer component for desktop view -->
+    <app-footer class="hidden md:block md:absolute md:bottom-0 md:left-0"></app-footer>
+  </div>
+</div>

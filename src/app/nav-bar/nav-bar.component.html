@@ -1,0 +1,21 @@
+<!-- Flex container with space between items and padding -->
+<div class="flex justify-between items-center px-4 py-6 md:mx-6">
+
+  <!-- Flex container with logo and desktop menu (visible on medium and larger screens) -->
+  <div class="md:flex md:space-x-16">
+    <img src="assets/images/logo.svg" alt="logo">
+    <app-side-nav-desktop-menu class="hidden md:block"></app-side-nav-desktop-menu>
+  </div>
+
+  <!-- Button for mobile menu (visible on small screens) -->
+  <button class="md:hidden" (click)="openMenu()">
+    <img class="h-5" src="assets/images/icon-menu.svg" alt="">
+  </button>
+
+  <!-- Flex container with login and register buttons (visible on medium and larger screens) -->
+  <div class="hidden flex text-sm text-Medium_Gray font-bold text-opacity-70 md:block md:space-x-8">
+    <button class="hover:text-Almost_Black">Login</button>
+    <button class="border-2 border-Medium_Gray border-opacity-70 py-2 px-4 rounded-xl hover:text-Almost_Black hover:border-Almost_Black">Register</button>
+  </div>
+
+</div>

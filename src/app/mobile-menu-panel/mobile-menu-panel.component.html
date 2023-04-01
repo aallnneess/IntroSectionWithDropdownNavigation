@@ -1,0 +1,25 @@
+<!-- The container div for the modal overlay -->
+<div [ngClass]="test()" class="absolute top-0 opacity-0 scale-0 bottom-0 left-0 right-0 bg-Almost_Black bg-opacity-70 md:hidden transition-all ease-in-out">
+
+  <!-- The modal content -->
+  <div class="flex flex-col p-6 absolute top-0 bottom-0 right-0 left-1/3 bg-Almost_White md:hidden">
+
+    <!-- Close button -->
+    <div class="flex justify-end">
+      <button (click)="closeModal()">
+        <img src="assets/images/icon-close-menu.svg">
+      </button>
+    </div>
+
+    <!-- Menu content -->
+    <app-side-nav-desktop-menu></app-side-nav-desktop-menu>
+
+    <!-- Login button -->
+    <button class="text-Medium_Gray text-sm mt-8 hover:text-Almost_Black">Login</button>
+
+    <!-- Register button -->
+    <button class="text-Medium_Gray text-sm mt-4 border-2 border-Medium_Gray border-opacity-70 py-2 px-4 rounded-xl hover:text-Almost_Black hover:border-Almost_Black">
+      Register
+    </button>
+  </div>
+</div>

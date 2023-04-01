@@ -1,0 +1,33 @@
+<!-- Navigation bar with dropdown menus for features and company sections -->
+<div class="flex flex-col space-y-4 md:space-y-0 mt-6 md:mt-0 items-start md:flex-row md:justify-between md:space-x-9">
+
+  <!-- Features dropdown menu -->
+<app-nav-button text="Features" [showArrow]="true" [usePopupMenu]="true" [fixRight]="true">
+  <div class="flex flex-col items-start space-y-4 md:space-y-1.5">
+
+  <app-menu-button text="Todo List" iconUrl="assets/images/icon-todo.svg"></app-menu-button>
+  <app-menu-button text="Calendar" iconUrl="assets/images/icon-calendar.svg"></app-menu-button>
+  <app-menu-button text="Reminders" iconUrl="assets/images/icon-reminders.svg"></app-menu-button>
+  <app-menu-button text="Planning" iconUrl="assets/images/icon-planning.svg"></app-menu-button>
+
+  </div>
+</app-nav-button>
+
+  <!-- Company dropdown menu -->
+<app-nav-button text="Company" [showArrow]="true" [usePopupMenu]="true" [fixLeft]="true">
+  <div class="flex flex-col items-start space-y-4 md:space-y-2">
+
+    <app-menu-button text="History"></app-menu-button>
+    <app-menu-button text="Our Team"></app-menu-button>
+    <app-menu-button text="Blog"></app-menu-button>
+
+  </div>
+
+</app-nav-button>
+
+  <!-- Non-dropdown menu buttons -->
+<app-nav-button text="Careers" [showArrow]="false"></app-nav-button>
+<app-nav-button text="About" [showArrow]="false"></app-nav-button>
+
+</div>
+

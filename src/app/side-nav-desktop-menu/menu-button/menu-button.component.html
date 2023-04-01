@@ -1,0 +1,15 @@
+<button class="text-sm text-Medium_Gray text-opacity-70">
+
+  <!-- flex container with space between items and center-aligned items -->
+  <div class="flex space-x-2 items-center justify-center">
+
+    <!-- div that contains an image element, only displayed if iconUrl exists -->
+    <div *ngIf="iconUrl">
+      <img class="" src="{{iconUrl}}" alt="icon">
+    </div>
+
+    <!-- paragraph element with the text property as its content -->
+    <p class="text-base md:text-sm">{{text}}</p>
+  </div>
+
+</button>
